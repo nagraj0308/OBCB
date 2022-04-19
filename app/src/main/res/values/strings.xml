@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">OBCB</string>
+    <string name="welcome_fragment">Welcome fragment</string>
+    <string name="document_list_fragment">Document List fragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_onebanc">WelCome to OneBanc!</string>
+    <string name="ljhitj">Let\'s join hands in the journey \n towards financial wellness</string>
+    <string name="lpfwulf">Let\'s pickup from where you left off</string>
+    <string name="get_started">Get Started</string>
+    <string name="continuee">Continue</string>
+    <string name="not_user">Not Rajesh?</string>
+
+
 </resources>

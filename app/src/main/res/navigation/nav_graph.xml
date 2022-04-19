@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.onebanc.obcb.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_documentListFragment"
+            app:destination="@id/documentListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/documentListFragment"
+        android:name="com.onebanc.obcb.DocumentListFragment"
+        android:label="fragment_document_list"
+        tools:layout="@layout/fragment_document_list" />
+<!--    <navigation android:id="@+id/documentListGraph" app:startDestination="@id/documentListFragment">-->
+<!--        <fragment-->
+<!--            android:id="@+id/chooseRecipient"-->
+<!--            android:name="com.example.cashdog.cashdog.ChooseRecipient"-->
+<!--            android:label="fragment_choose_recipient"-->
+<!--            tools:layout="@layout/fragment_choose_recipient">-->
+<!--            <action-->
+<!--                android:id="@+id/action_chooseRecipient_to_chooseAmountFragment"-->
+<!--                app:destination="@id/chooseAmountFragment" />-->
+<!--        </fragment>-->
+<!--        <fragment-->
+<!--            android:id="@+id/chooseAmountFragment"-->
+<!--            android:name="com.example.cashdog.cashdog.ChooseAmountFragment"-->
+<!--            android:label="fragment_choose_amount"-->
+<!--            tools:layout="@layout/fragment_choose_amount" />-->
+<!--    </navigation>-->
+</navigation>
