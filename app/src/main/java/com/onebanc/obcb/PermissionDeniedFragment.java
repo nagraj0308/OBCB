@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class PermissonDeniedFragment extends Fragment {
+public class PermissionDeniedFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,7 +20,7 @@ public class PermissonDeniedFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public PermissonDeniedFragment() {
+    public PermissionDeniedFragment() {
         // Required empty public constructor
     }
 
@@ -33,8 +33,8 @@ public class PermissonDeniedFragment extends Fragment {
      * @return A new instance of fragment PermissonDeniedFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static PermissonDeniedFragment newInstance(String param1, String param2) {
-        PermissonDeniedFragment fragment = new PermissonDeniedFragment();
+    public static PermissionDeniedFragment newInstance(String param1, String param2) {
+        PermissionDeniedFragment fragment = new PermissionDeniedFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
