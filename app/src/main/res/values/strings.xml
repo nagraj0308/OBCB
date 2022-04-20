@@ -17,6 +17,11 @@
     <string name="atalmn">Access to Aadhaar linked mobile no to get OTP</string>
     <string name="wbsapp">White blank sheet &amp; black pen</string>
     <string name="dmsuiwir">Do make sure you are in a well-lit room with a plain wall in the background</string>
-
+    <string name="wnfpfsaoj">We need few permissions for seamless account opening journey</string>
+    <string name="phone_identity">Phone Identity</string>
+    <string name="camera">Camera</string>
+    <string name="microphone">Microphone</string>
+    <string name="location">Location</string>
+    <string name="sms_read">SMS Read</string>
 
 </resources>
