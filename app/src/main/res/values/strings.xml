@@ -9,6 +9,14 @@
     <string name="get_started">Get Started</string>
     <string name="continuee">Continue</string>
     <string name="not_user">Not Rajesh?</string>
+    <string name="ready">Yes, I\'m Ready</string>
+    <string name="are_u_ready">Are you ready?</string>
+    <string name="ush">You should have:</string>
+    <string name="opc">Original PAN card</string>
+    <string name="an">Aadhaar number</string>
+    <string name="atalmn">Access to Aadhaar linked mobile no to get OTP</string>
+    <string name="wbsapp">White blank sheet &amp; black pen</string>
+    <string name="dmsuiwir">Do make sure you are in a well-lit room with a plain wall in the background</string>
 
 
 </resources>
