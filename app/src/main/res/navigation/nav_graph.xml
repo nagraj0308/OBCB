@@ -27,14 +27,75 @@
 
             <action
                 android:id="@+id/action_documentListFragment_to_permissionListFragment"
-                app:destination="@id/permissionListFragment" />
-
+                app:destination="@id/permissionListGraph" />
         </fragment>
-        <fragment
-            android:id="@+id/permissionListFragment"
-            android:name="com.onebanc.obcb.PermissionListFragment"
-            android:label="fragment_permission_list"
-            tools:layout="@layout/fragment_permission_list" />
+
+        <navigation
+            android:id="@+id/permissionListGraph"
+            app:startDestination="@id/permissionListFragment">
+            <fragment
+                android:id="@+id/permissionListFragment"
+                android:name="com.onebanc.obcb.PermissionListFragment"
+                android:label="fragment_document_list"
+                tools:layout="@layout/fragment_document_list">
+
+                <action
+                    android:id="@+id/action_permissionListFragment_to_permissionDeniedFragment"
+                    app:destination="@id/permissionDeniedFragment">
+                    <argument
+                        android:name="arg_error_no"
+                        android:defaultValue="0"
+                        app:argType="integer" />
+                </action>
+
+                <action
+                    android:id="@+id/action_permissionListFragment_to_permissionQRScanFragment"
+                    app:destination="@id/qrScanGraph">
+                    <!--                    <argument-->
+                    <!--                        android:name="arg_error_no"-->
+                    <!--                        app:argType="integer"-->
+                    <!--                        android:defaultValue="0" />-->
+                </action>
+
+            </fragment>
+            <navigation
+                android:id="@+id/qrScanGraph"
+                app:startDestination="@id/qrScanGraphFragment">
+                <fragment
+                    android:id="@+id/qrScanGraphFragment"
+                    android:name="com.onebanc.obcb.QRScanFragment"
+                    android:label="fragment_q_r_scan"
+                    tools:layout="@layout/fragment_q_r_scan">
+
+                    <action
+                        android:id="@+id/action_qrScanFragment_to_enterInviteCodeManuallyFragment"
+                        app:destination="@id/enterInviteCodeManually">
+                        <argument
+                            android:name="arg_error_no"
+                            android:defaultValue="0"
+                            app:argType="integer" />
+                    </action>
+                </fragment>
+                <fragment
+                    android:id="@+id/enterInviteCodeManually"
+                    android:name="com.onebanc.obcb.EnterInviteCodeManuallyFragment"
+                    android:label="fragment_enter_invite_code_manually"
+                    tools:layout="@layout/fragment_enter_invite_code_manually" />
+
+            </navigation>
+
+
+            <fragment
+                android:id="@+id/permissionDeniedFragment"
+                android:name="com.onebanc.obcb.PermissionDeniedFragment"
+                android:label="fragment_permission_denied"
+                tools:layout="@layout/fragment_permisson_denied" />
+            <fragment
+                android:id="@+id/qrScanFragment"
+                android:name="com.onebanc.obcb.QRScanFragment"
+                android:label="fragment_q_r_scan"
+                tools:layout="@layout/fragment_q_r_scan" />
+        </navigation>
     </navigation>
 
 
