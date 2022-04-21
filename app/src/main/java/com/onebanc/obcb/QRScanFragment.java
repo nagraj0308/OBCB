@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +37,7 @@ public class QRScanFragment extends Fragment {
     private String mParam2;
     private ScannerLiveView camera;
     private TextView scannedTV;
+    private ImageButton ivClose;
 
     public QRScanFragment() {
         // Required empty public constructor
@@ -80,6 +82,12 @@ public class QRScanFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         scannedTV = view.findViewById(R.id.idTVscanned);
         camera = view.findViewById(R.id.camview);
+
+        ivClose = view.findViewById(R.id.ib_cross);
+
+        ivClose.setOnClickListener(view2 -> {
+            Objects.requireNonNull(getActivity()).onBackPressed();
+        });
 
         scannedTV.setOnClickListener(view1 -> {
             Navigation.findNavController(view).navigate(R.id.action_qrScanFragment_to_enterInviteCodeManuallyFragment);
