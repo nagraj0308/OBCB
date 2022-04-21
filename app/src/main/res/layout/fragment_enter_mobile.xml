@@ -43,7 +43,7 @@
             android:id="@+id/rl_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="40dp"
             android:layout_marginBottom="40dp"
             android:background="@color/transparent">
 
@@ -60,14 +60,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/drawable_name_graphic" />
+                android:background="@drawable/drawable_mobile_graphic" />
 
 
             <RelativeLayout
                 android:id="@+id/rl_contenti"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-40dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginEnd="35dp"
                 android:layout_below="@+id/iv_wg"
                 android:layout_toEndOf="@+id/ib_cross"
@@ -81,7 +81,7 @@
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="10dp"
                     android:paddingStart="20dp"
-                    android:text="First up, what's your name?"
+                    android:text="What's your mobile no, Rajesh"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_xlarge" />
 
@@ -91,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_rur"
                     android:paddingStart="20dp"
-                    android:text="Let's get to know each other"
+                    android:text="Promise, we won't make noise "
                     android:textColor="@color/teal_700"
                     android:textSize="@dimen/text_medium" />
 
@@ -106,7 +106,7 @@
                     android:background="@color/white"
                     android:padding="5dp"
                     android:layout_marginTop="20dp"
-                    android:hint="Type your name here"
+                    android:hint="999 999 9999"
                     android:textColorHint="@color/teal_700"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_large"

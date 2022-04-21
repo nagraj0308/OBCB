@@ -75,6 +75,14 @@
                             android:defaultValue="0"
                             app:argType="integer" />
                     </action>
+                    <action
+                        android:id="@+id/action_qrScanFragment_to_enterNameFragment"
+                        app:destination="@id/enterNameGraph1">
+                        <argument
+                            android:name="arg_error_no"
+                            android:defaultValue="0"
+                            app:argType="integer" />
+                    </action>
                 </fragment>
                 <navigation
                     android:id="@+id/enterInviteCodeManuallyGraph"
@@ -121,6 +129,32 @@
 
                     </navigation>
 
+
+                </navigation>
+                <navigation
+                    android:id="@+id/enterNameGraph1"
+                    app:startDestination="@id/enterNameFragment">
+                    <fragment
+                        android:id="@+id/enterNameFragment"
+                        android:name="com.onebanc.obcb.EnterNameFragment"
+                        android:label="fragment_enter_name"
+                        tools:layout="@layout/fragment_enter_name">
+
+                        <action
+                            android:id="@+id/action_enterNameFragment_to_enterPhoneFragment"
+                            app:destination="@id/enterPhoneFragment">
+                            <argument
+                                android:name="arg_error_no"
+                                android:defaultValue="0"
+                                app:argType="integer" />
+                        </action>
+                    </fragment>
+
+                    <fragment
+                        android:id="@+id/enterPhoneFragment"
+                        android:name="com.onebanc.obcb.EnterMobileFragment"
+                        android:label="fragment_enter_mobile"
+                        tools:layout="@layout/fragment_enter_mobile" />
 
                 </navigation>
             </navigation>

@@ -108,6 +108,7 @@ public class QRScanFragment extends Fragment {
             @Override
             public void onCodeScanned(String data) {
                 scannedTV.setText(data);
+                Navigation.findNavController(view).navigate(R.id.action_qrScanFragment_to_enterNameFragment);
             }
         });
     }
