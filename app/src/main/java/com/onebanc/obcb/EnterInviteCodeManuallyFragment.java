@@ -5,11 +5,15 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+
+import java.util.Objects;
 
 public class EnterInviteCodeManuallyFragment extends Fragment {
 
@@ -22,6 +26,7 @@ public class EnterInviteCodeManuallyFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private Button btnNext;
+    private ImageButton ivClose;
 
     public EnterInviteCodeManuallyFragment() {
         // Required empty public constructor
@@ -58,7 +63,13 @@ public class EnterInviteCodeManuallyFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         btnNext = view.findViewById(R.id.btn_ready);
         btnNext.setOnClickListener(view1 -> {
+            Navigation.findNavController(view).navigate(R.id.action_enterInviteCodeManuallyFragment_to_enterNameFragment);
+        });
 
+        ivClose = view.findViewById(R.id.ib_cross);
+
+        ivClose.setOnClickListener(view2 -> {
+            Objects.requireNonNull(getActivity()).onBackPressed();
         });
     }
 }

@@ -43,7 +43,7 @@
             android:id="@+id/rl_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="50dp"
             android:layout_marginBottom="40dp"
             android:background="@color/transparent">
 
@@ -59,6 +59,7 @@
                 android:id="@+id/rl_contenti"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
                 android:layout_marginEnd="35dp"
                 android:layout_toEndOf="@+id/ib_cross"
                 android:background="@color/transparent">

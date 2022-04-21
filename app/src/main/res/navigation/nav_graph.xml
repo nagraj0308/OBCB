@@ -69,7 +69,7 @@
 
                     <action
                         android:id="@+id/action_qrScanFragment_to_enterInviteCodeManuallyFragment"
-                        app:destination="@id/enterInviteCodeManually">
+                        app:destination="@id/enterInviteCodeManuallyGraph">
                         <argument
                             android:name="arg_error_no"
                             android:defaultValue="0"
@@ -78,49 +78,57 @@
                 </fragment>
                 <navigation
                     android:id="@+id/enterInviteCodeManuallyGraph"
-                    app:startDestination="@id/qrScanGraphFragment">
+                    app:startDestination="@id/enterInviteCodeManuallyFragment">
                     <fragment
-                        android:id="@+id/enterInviteCodeManually"
+                        android:id="@+id/enterInviteCodeManuallyFragment"
                         android:name="com.onebanc.obcb.EnterInviteCodeManuallyFragment"
                         android:label="fragment_enter_invite_code_manually"
-                        tools:layout="@layout/fragment_enter_invite_code_manually"
-                        >
+                        tools:layout="@layout/fragment_enter_invite_code_manually">
 
                         <action
-                            android:id="@+id/action_qrScanFragment_to_enterInviteCodeManuallyFragment"
-                            app:destination="@id/enterInviteCodeManually">
+                            android:id="@+id/action_enterInviteCodeManuallyFragment_to_enterNameFragment"
+                            app:destination="@id/enterNameGraph">
                             <argument
                                 android:name="arg_error_no"
                                 android:defaultValue="0"
                                 app:argType="integer" />
                         </action>
                     </fragment>
-<!--                    <fragment-->
-<!--                        android:id="@+id/enterInviteCodeManually"-->
-<!--                        android:name="com.onebanc.obcb.EnterInviteCodeManuallyFragment"-->
-<!--                        android:label="fragment_enter_invite_code_manually"-->
-<!--                        tools:layout="@layout/fragment_enter_invite_code_manually" />-->
+                    <navigation
+                        android:id="@+id/enterNameGraph"
+                        app:startDestination="@id/enterNameFragment">
+                        <fragment
+                            android:id="@+id/enterNameFragment"
+                            android:name="com.onebanc.obcb.EnterNameFragment"
+                            android:label="fragment_enter_name"
+                            tools:layout="@layout/fragment_enter_name">
+
+                            <action
+                                android:id="@+id/action_enterNameFragment_to_enterPhoneFragment"
+                                app:destination="@id/enterPhoneFragment">
+                                <argument
+                                    android:name="arg_error_no"
+                                    android:defaultValue="0"
+                                    app:argType="integer" />
+                            </action>
+                        </fragment>
+
+                        <fragment
+                            android:id="@+id/enterPhoneFragment"
+                            android:name="com.onebanc.obcb.EnterMobileFragment"
+                            android:label="fragment_enter_mobile"
+                            tools:layout="@layout/fragment_enter_mobile" />
+
+                    </navigation>
+
 
                 </navigation>
-                <fragment
-                    android:id="@+id/enterInviteCodeManually"
-                    android:name="com.onebanc.obcb.EnterInviteCodeManuallyFragment"
-                    android:label="fragment_enter_invite_code_manually"
-                    tools:layout="@layout/fragment_enter_invite_code_manually" />
-
             </navigation>
-
-
             <fragment
                 android:id="@+id/permissionDeniedFragment"
                 android:name="com.onebanc.obcb.PermissionDeniedFragment"
                 android:label="fragment_permission_denied"
                 tools:layout="@layout/fragment_permisson_denied" />
-            <fragment
-                android:id="@+id/qrScanFragment"
-                android:name="com.onebanc.obcb.QRScanFragment"
-                android:label="fragment_q_r_scan"
-                tools:layout="@layout/fragment_q_r_scan" />
         </navigation>
     </navigation>
 

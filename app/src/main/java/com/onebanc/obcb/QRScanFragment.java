@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 import eu.livotov.labs.android.camview.ScannerLiveView;
 import eu.livotov.labs.android.camview.scanner.decoder.zxing.ZXDecoder;
 
@@ -78,6 +80,7 @@ public class QRScanFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         scannedTV = view.findViewById(R.id.idTVscanned);
         camera = view.findViewById(R.id.camview);
+
         scannedTV.setOnClickListener(view1 -> {
             Navigation.findNavController(view).navigate(R.id.action_qrScanFragment_to_enterInviteCodeManuallyFragment);
         });
