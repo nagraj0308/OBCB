@@ -210,12 +210,20 @@ public class PermissionListFragment extends Fragment {
         }
     }
 
-
-//    public static void permissionResult(int reqCode, boolean resultCode) {
+    @Override
+    public void onResume() {
+        super.onResume();
+        applyPermissions();
+    }
+    //    public static void permissionResult(int reqCode, boolean resultCode) {
 //
 //        if (reqCode == REQUEST_CODE_CAMERA && !resultCode) {
 //
 //        }
 //    }
+
+    void fun(){
+
+    }
 
 }
