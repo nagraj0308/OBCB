@@ -9,7 +9,7 @@
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="background">#FFFFFFFF</color>
+    <color name="background">#E9FFFFFF</color>
     <color name="color_button">#711CEA</color>
     <color name="transparent">#00000000</color>
 </resources>

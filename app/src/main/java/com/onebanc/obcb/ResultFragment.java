@@ -2,16 +2,18 @@ package com.onebanc.obcb;
 
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
-public class EnterInviteCodeManuallyFragment extends Fragment {
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link ResultFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class ResultFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,15 +23,22 @@ public class EnterInviteCodeManuallyFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private Button btnNext;
 
-    public EnterInviteCodeManuallyFragment() {
+    public ResultFragment() {
         // Required empty public constructor
     }
 
-
-    public static EnterInviteCodeManuallyFragment newInstance(String param1, String param2) {
-        EnterInviteCodeManuallyFragment fragment = new EnterInviteCodeManuallyFragment();
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment ResultFragment.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static ResultFragment newInstance(String param1, String param2) {
+        ResultFragment fragment = new ResultFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -50,15 +59,6 @@ public class EnterInviteCodeManuallyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_enter_invite_code_manually, container, false);
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        btnNext = view.findViewById(R.id.btn_ready);
-        btnNext.setOnClickListener(view1 -> {
-
-        });
+        return inflater.inflate(R.layout.fragment_result, container, false);
     }
 }

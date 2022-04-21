@@ -76,6 +76,32 @@
                             app:argType="integer" />
                     </action>
                 </fragment>
+                <navigation
+                    android:id="@+id/enterInviteCodeManuallyGraph"
+                    app:startDestination="@id/qrScanGraphFragment">
+                    <fragment
+                        android:id="@+id/enterInviteCodeManually"
+                        android:name="com.onebanc.obcb.EnterInviteCodeManuallyFragment"
+                        android:label="fragment_enter_invite_code_manually"
+                        tools:layout="@layout/fragment_enter_invite_code_manually"
+                        >
+
+                        <action
+                            android:id="@+id/action_qrScanFragment_to_enterInviteCodeManuallyFragment"
+                            app:destination="@id/enterInviteCodeManually">
+                            <argument
+                                android:name="arg_error_no"
+                                android:defaultValue="0"
+                                app:argType="integer" />
+                        </action>
+                    </fragment>
+<!--                    <fragment-->
+<!--                        android:id="@+id/enterInviteCodeManually"-->
+<!--                        android:name="com.onebanc.obcb.EnterInviteCodeManuallyFragment"-->
+<!--                        android:label="fragment_enter_invite_code_manually"-->
+<!--                        tools:layout="@layout/fragment_enter_invite_code_manually" />-->
+
+                </navigation>
                 <fragment
                     android:id="@+id/enterInviteCodeManually"
                     android:name="com.onebanc.obcb.EnterInviteCodeManuallyFragment"
